@@ -47,7 +47,8 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
+var roastSelector = document.querySelector(`#roast-selection`);
+roastSelector.addEventListener("click", updateCoffees);
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');

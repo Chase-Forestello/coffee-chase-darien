@@ -55,5 +55,9 @@ var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
+<<<<<<< HEAD
 roastSelector.addEventListener("change", updateCoffees);
 submitButton.addEventListener('click', updateCoffees);
+=======
+submitButton.addEventListener('click', updateCoffees);
+>>>>>>> 72bfc94980ae6dd3fe0fb3e14800359b35da0ce6

@@ -1,3 +1,15 @@
+/*!* row color *!*/
+/*div.row {*/
+/*    border: 1px dashed blue;*/
+/*}*/
+/*!* cell color *!*/
+/*div.row > div {*/
+/*    border: 1px solid red;*/
+/*}*/
+/*div.tall-row {*/
+/*    height: 300px;*/
+/*}*/
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +18,16 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+#coffeeName {
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+}
+
+input {
+    border-radius: 5px;
 }

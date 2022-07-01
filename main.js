@@ -5,7 +5,7 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var submitButton2 = document.querySelector('#submit2');
 var roastSelection = document.querySelector('#roast-selection');
-var names = document.getElementsByClassName("coffee");
+var names = document.getElementsByClassName('coffee');
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';

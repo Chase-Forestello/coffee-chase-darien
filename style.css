@@ -40,3 +40,7 @@ input {
 section {
     margin: 0;
 }
+
+footer {
+    border-top: 1px solid grey;
+}

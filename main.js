@@ -8,8 +8,7 @@ var names = document.getElementsByClassName("coffee");
 var selectedCreatedRoast = document.querySelector(`#createRoast`); // new roast
 
 function renderCoffee(coffee) {
-    // var html = '<div class="coffee col-6">' + coffee.name + ` ` + coffee.roast +'</div>';
-    var html = `<small class="coffee col-6"><div class="fs-4">${coffee.name}</div><small<div class="text-muted">${coffee.roast}</div></small>`
+    var html = `<div class="coffee col-6"><div class="fs-4">${coffee.name}</div><div class="text-muted">${coffee.roast}</div></div>`
 
     return html;
 }
@@ -49,8 +48,8 @@ var searchInput = document.getElementById("coffeeName");
 
 searchInput.addEventListener("keyup", (event) => {
     var {value} = event.target;
-
     var searchQuery = value.toLowerCase();
+
     for (const nameElement of names) {
         let name = nameElement.textContent.toLowerCase();
         if (name.includes(searchQuery)) {
@@ -79,7 +78,7 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-section.innerHTML = renderCoffees(coffees);
+section.innerHTML = renderCoffees(coffees.reverse());
 
 submitButton.addEventListener('click', updateCoffees);
 submitButton2.addEventListener('click', updateCoffees);

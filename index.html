@@ -22,10 +22,10 @@
 						</button>
 						<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 							<div class="navbar-nav">
-								<a class="nav-link active" aria-current="page" href="#">Home</a>
-								<a class="nav-link" href="#">Features</a>
-								<a class="nav-link" href="#">Pricing</a>
-								<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+<!--								<a class="nav-link active" aria-current="page" href="#">Home</a>-->
+<!--								<a class="nav-link" href="#">Features</a>-->
+<!--								<a class="nav-link" href="#">Pricing</a>-->
+<!--								<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
 							</div>
 						</div>
 					</div>
@@ -46,13 +46,8 @@
 						<div class="col-6 text-wrap">
 							<table>
 								<thead>
-								<tr>
-									<th>ID</th>
-									<th>NAME</th>
-									<th>ROAST</th>
-								</tr>
 								</thead>
-								<tbody id="coffees"></tbody>
+								<section class="row" id="coffees"></section>
 							</table>
 						</div>
 
@@ -86,18 +81,18 @@
 								<h3>Add a Coffee</h3>
 								<form>
 									<div class="mb-3">
-										<label for="roast-selection">Roast</label>
-										<select id="test" class="form-select">
-											<option>light</option>
-											<option>medium</option>
-											<option>dark</option>
+										<label for="createRoast">Roast</label>
+										<select id="createRoast" class="form-select">
+											<option value="light">light</option>
+											<option value="medium">medium</option>
+											<option value="dark">dark</option>
 										</select>
 									</div>
 
 									<div class="col-12 mt-2">
 										<label for="createCoffee">Name</label>
 										<br>
-										<input id="createCoffee" type="text" name="coffeeName" placeholder="coffee" style="width: 100%">
+										<input id="createCoffee" type="text" name="createCoffee" placeholder="add a coffee" style="width: 100%">
 									</div>
 
 									<div class="col-12 my-3">

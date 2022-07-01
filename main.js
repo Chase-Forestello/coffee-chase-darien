@@ -1,18 +1,18 @@
 "use strict"
-
 var roastSelector = document.querySelector('#roast-selection');
-var tbody = document.querySelector('#coffees');
+var section = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var submitButton2 = document.querySelector('#submit2');
 var roastSelection = document.querySelector('#roast-selection');
 var names = document.getElementsByClassName("coffee");
+var selectedCreatedRoast = document.querySelector(`#createRoast`); // new roast
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee"></div>';
+    html += '<div class="d-none">' + coffee.id + '</div>';
+    html += '<div class="col-6 text-wrap">' + coffee.name + ` ` + coffee.roast +'</div>';
+    // html += '<div>' + coffee.roast + '</div>';
+    html += '</div>';
 
     return html;
 }
@@ -45,6 +45,8 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 
 }
+var newSelectedRoast = selectedCreatedRoast.value; // new roast
+console.log(newSelectedRoast); // new roast
 
 var searchInput = document.getElementById("coffeeName");
 
@@ -80,9 +82,8 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-tbody.innerHTML = renderCoffees(coffees);
+section.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 submitButton2.addEventListener('click', updateCoffees);
 roastSelector.addEventListener('change', updateCoffees);
-

@@ -34,4 +34,9 @@ input {
 
 #coffees {
     background-color: bisque;
+    margin: 0;
+}
+
+section {
+    margin: 0;
 }

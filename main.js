@@ -10,7 +10,7 @@ var selectedCreatedRoast = document.querySelector(`#createRoast`); // new roast
 function renderCoffee(coffee) {
     var html = '<div class="coffee"></div>';
     html += '<div class="d-none">' + coffee.id + '</div>';
-    html += '<div class="col-6 text-wrap">' + coffee.name + ` ` + coffee.roast +'</div>';
+    html += '<div>' + coffee.name + ` ` + coffee.roast +'</div>';
     // html += '<div>' + coffee.roast + '</div>';
     html += '</div>';
 
@@ -31,7 +31,7 @@ function updateCoffees(e) {
     var filteredCoffees = [];
 
     if(roastSelection.value === 'all'){
-        tbody.innerHTML = renderCoffees(coffees);
+        section.innerHTML = renderCoffees(coffees);
         return;
     }
     console.log(selectedRoast);
@@ -42,7 +42,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    section.innerHTML = renderCoffees(filteredCoffees);
 
 }
 var newSelectedRoast = selectedCreatedRoast.value; // new roast

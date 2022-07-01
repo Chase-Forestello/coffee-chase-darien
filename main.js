@@ -8,11 +8,8 @@ var names = document.getElementsByClassName("coffee");
 var selectedCreatedRoast = document.querySelector(`#createRoast`); // new roast
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee"></div>';
-    html += '<div class="d-none">' + coffee.id + '</div>';
-    html += '<div>' + coffee.name + ` ` + coffee.roast +'</div>';
-    // html += '<div>' + coffee.roast + '</div>';
-    html += '</div>';
+    // var html = '<div class="coffee col-6">' + coffee.name + ` ` + coffee.roast +'</div>';
+    var html = `<small class="coffee col-6"><div class="fs-4">${coffee.name}</div><small<div class="text-muted">${coffee.roast}</div></small>`
 
     return html;
 }

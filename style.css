@@ -1,14 +1,14 @@
-/* row color */
-div.row {
-    border: 1px dashed blue;
-}
-/* cell color */
-div.row > div {
-    border: 1px solid red;
-}
-div.tall-row {
-    height: 300px;
-}
+/*!* row color *!*/
+/*div.row {*/
+/*    border: 1px dashed blue;*/
+/*}*/
+/*!* cell color *!*/
+/*div.row > div {*/
+/*    border: 1px solid red;*/
+/*}*/
+/*div.tall-row {*/
+/*    height: 300px;*/
+/*}*/
 
 table {
     border-collapse: collapse;
@@ -33,8 +33,8 @@ input {
 }
 
 #coffees {
-    background-color: bisque;
-    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 section {

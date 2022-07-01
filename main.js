@@ -22,24 +22,20 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    // var selectedCoffee = searchCoffee.value;
-    // var theOne = [];
+
+    if(roastSelection.value === 'all'){
+        tbody.innerHTML = renderCoffees(coffees);
+        return;
+    }
+    console.log(selectedRoast);
 
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        } else {
 
+        if (selectedRoast === coffee.roast) {
+            filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
-
-    // filteredCoffees.forEach(function(coffee) {
-    //     if (coffee.name === selectedCoffee) {
-    //         selectedCoffee.push(coffee);
-    //     }
-    // });
-    // tbody.innerHTML = renderCoffees(theOne);
 
 }
 
@@ -68,8 +64,8 @@ var coffees = [
 var roastSelector = document.querySelector('#roast-selection');
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
+var submitButton2 = document.querySelector('#submit2');
 var roastSelection = document.querySelector('#roast-selection');
-var searchCoffee = document.querySelector('#coffeeName');
 
 
 
@@ -92,7 +88,7 @@ searchInput.addEventListener("keyup", (event) => {
 tbody.innerHTML = renderCoffees(coffees);
 
 
-// searchCoffee.addEventListener('click', secondUpdate)
 submitButton.addEventListener('click', updateCoffees);
-submitButton.addEventListener('click', updateCoffees);
+submitButton2.addEventListener('click', updateCoffees);
 roastSelector.addEventListener('change', updateCoffees);
+

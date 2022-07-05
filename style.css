@@ -9,6 +9,13 @@
 /*div.tall-row {*/
 /*    height: 300px;*/
 /*}*/
+@keyframes luckyCoffee {
+    0% { color: red; left:0px; top: 0px;}
+    50% { color: green; left:200px; top: 50px; }
+    75% { color: blue; left:200px; top: 200px;}
+    100% { color: red; left:0px; top: 0px; }
+
+}
 body {
     background-color: bisque;
 }
@@ -70,4 +77,32 @@ header {
 }
 .coffeeList {
     display: inline-table;
+}
+.luckyCoffee {
+    animation-name: luckyCoffee;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    z-index: 1000;
+
+}
+#submit1 {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: hsl(228, 100%, 47%);
+    color: white;
+    transform: translateY(-6px);
+}
+#pushable {
+    background: hsla(210, 100%, 50%, 0.53);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    width: 100%;
+}
+#pushable:active #submit1 {
+    transform: translateY(-2px);
 }

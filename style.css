@@ -14,33 +14,58 @@ table {
     border-collapse: collapse;
     margin: 15px 0;
 }
-
-td, th {
+tbody {
     border: 1px solid black;
     padding: 5px 10px;
 }
-
 #coffeeName {
     width: 100%;
 }
-
 h3 {
     text-align: center;
 }
-
 input {
     border-radius: 5px;
 }
-
 #coffees {
     display: flex;
     flex-wrap: wrap;
 }
-
 section {
     margin: 0;
 }
 
 footer {
     border-top: 1px solid grey;
+}
+.coffee {
+    color: rgba(180, 82, 21, 0.62);
+    font-family: 'Playfair Display', sans-serif;
+}
+header {
+    font-family: 'Raleway', sans-serif;
+    background-image: url("Light-Medium-Dark-Roast-Beans-2500_2500x.jpg");
+    background-size: cover;
+    color: #fdf3e0;
+}
+.sub-header {
+    font-family: 'Raleway', sans-serif;
+}
+.by {
+    font-size: x-small;
+}
+.light {
+    color: #f5b467;
+}
+.medium {
+    color: #bd7a2d;
+}
+.dark {
+    color: #673902;
+}
+.roastLevel {
+    width: 55%;
+}
+.coffeeList {
+    display: inline-table;
 }

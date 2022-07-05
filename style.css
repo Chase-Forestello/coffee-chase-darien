@@ -9,7 +9,9 @@
 /*div.tall-row {*/
 /*    height: 300px;*/
 /*}*/
-
+body {
+    background-color: bisque;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;

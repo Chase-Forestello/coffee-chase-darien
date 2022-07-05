@@ -32,7 +32,7 @@ function pushCoffee (e) {
 
 function renderCoffee(coffee) {
     return `<div class="coffee col-12 col-sm-12 col-md-12 col-lg-6 col-xxl-6">
-                    <div class="card fs-4 fw-bold text-nowrap text-center p-3 m-2 b-1"><span>${coffee.name} ${coffee.roast}</span></div>
+                    <div class="card fs-4 fw-bold text-nowrap text-center p-3 m-2 b-1" style="border-radius: 1em"><span>${coffee.name} ${coffee.roast}</span></div>
                 </div>`;
 }
 

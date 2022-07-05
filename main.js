@@ -9,6 +9,7 @@ var selectedCreatedRoast = document.getElementById('createRoast')
 var newDrink = document.getElementById('createCoffee');
 
 
+
 console.log(`Search roast: ${roastSelection.value}`);
 console.log(`Created roast: ${selectedCreatedRoast}`);
 function newRoast () {

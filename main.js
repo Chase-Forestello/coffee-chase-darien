@@ -6,12 +6,28 @@ var submitButton2 = document.getElementById('submit2');
 var roastSelection = document.getElementById('roast-selection');
 var names = document.getElementsByClassName("coffee");
 var selectedCreatedRoast = document.getElementById('createRoast')
+var newDrink = document.getElementById('createCoffee');
 
-console.log(`Search roast: ${roastSelection.value}`)
-console.log(`Created roast: ${selectedCreatedRoast.value}`);
+
+console.log(`Search roast: ${roastSelection.value}`);
+console.log(`Created roast: ${selectedCreatedRoast}`);
 function newRoast () {
     console.log(`Created roast: ${selectedCreatedRoast.value}`);
 }
+function newCoffeeName () {
+
+    console.log(newDrink.value);
+}
+function pushCoffee (e) {
+    var newCoffee = {id: selectedCreatedRoast.value, name: newDrink.value, roast: '<i class="fa-solid fa-mug-hot"></i>'};
+    e.preventDefault();
+    coffees.push(newCoffee);
+    console.log(newCoffee);
+    section.innerHTML = renderCoffees(coffees);
+
+
+}
+
 
 function renderCoffee(coffee) {
     return `<div class="coffee col-12 col-sm-12 col-md-12 col-lg-6 col-xxl-6">
@@ -88,6 +104,7 @@ var coffees = [
 section.innerHTML = renderCoffees(coffees.reverse());
 
 submitButton.addEventListener('click', updateCoffees);
-submitButton2.addEventListener('click', updateCoffees);
+submitButton2.addEventListener('click', pushCoffee,);
 roastSelection.addEventListener('change', updateCoffees);
 selectedCreatedRoast.addEventListener('change', newRoast);
+newDrink.addEventListener('change', newCoffeeName);

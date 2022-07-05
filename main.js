@@ -20,7 +20,7 @@ function newCoffeeName () {
     console.log(newDrink.value);
 }
 function pushCoffee (e) {
-    var newCoffee = {id: selectedCreatedRoast.value, name: newDrink.value, roast: '<i class="fa-solid fa-mug-hot"></i>'};
+    var newCoffee = {id: selectedCreatedRoast.value, name: newDrink.value, roast: `<i class="${selectedCreatedRoast.value} fa-solid fa-mug-hot"></i>`};
     e.preventDefault();
     coffees.push(newCoffee);
     console.log(newCoffee);

@@ -8,7 +8,7 @@ var roastSelection = document.getElementById('roast-selection');
 var names = document.getElementsByClassName("coffee");
 var selectedCreatedRoast = document.getElementById('createRoast')
 var newDrink = document.getElementById('createCoffee');
-
+var newDescription = document.getElementById('createDescription');
 
 
 console.log(`Search roast: ${roastSelection.value}`);
@@ -25,7 +25,7 @@ function feelingLucky (e) {
 }
 
 function pushCoffee (e) {
-    var newCoffee = {id: selectedCreatedRoast.value, name: newDrink.value, roast: `<i class="${selectedCreatedRoast.value} fa-solid fa-mug-hot"></i>`};
+    var newCoffee = {id: selectedCreatedRoast.value, name: newDrink.value, roast: `<i class="${selectedCreatedRoast.value} fa-solid fa-mug-hot"></i>`, description: newDescription.value};
     e.preventDefault();
     if (newCoffee.name.length === 0) {
         alert('You must enter a name');

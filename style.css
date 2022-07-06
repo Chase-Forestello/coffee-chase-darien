@@ -29,6 +29,10 @@ section {
 
 footer {
     border-top: 1px solid grey;
+    color: floralwhite;
+}
+.footanchor {
+    color: floralwhite;
 }
 .coffee {
     color: rgba(180, 82, 21, 0.62);
@@ -37,18 +41,22 @@ footer {
 nav {
     width: 100%;
 }
-header {
+.header {
     font-family: 'Raleway', sans-serif;
     background-image: url("Light-Medium-Dark-Roast-Beans-2500_2500x.jpg");
     background-size: cover;
-    color: #fdf3e0;
+    color: rgb(250, 250, 250);
     width: 100%;
+    border-radius: 5em;
+    font-size: 2em;
+    font-weight: bolder;
 }
 .sub-header {
     font-family: 'Raleway', sans-serif;
 }
 .by {
     font-size: x-small;
+    color: whitesmoke;
 }
 .light {
     color: #f5b467;
@@ -70,12 +78,20 @@ header {
     padding: 12px 42px;
     border-radius: 12px;
     font-size: 1.25rem;
-    background: hsl(228, 100%, 47%);
+    background: hsla(33, 100%, 54%, 0.53);
     color: white;
     transform: translateY(-6px);
 }
+#submit2{
+    background: rgba(139, 69, 19, 0.87);
+    border-color: #5E453E;
+}
+#submit3{
+    background: rgba(139, 69, 19, 0.87);
+    border-color: #5E453E;
+}
 #pushable {
-    background: hsla(210, 100%, 50%, 0.53);
+    background: hsl(28, 68%, 31%);
     border: none;
     border-radius: 12px;
     padding: 0;
@@ -139,6 +155,11 @@ header {
     position: relative;
     bottom: 3em;
 }
+body {
+    background-image: url("coffee2.jpeg");
+    background-size: cover;
+    background-repeat: space;
+}
 .card-text {
     position: relative;
     top: 1em;
@@ -146,7 +167,46 @@ header {
 .rotate {
     animation: rotation 3s ease-in-out;
 }
+.menu {
+    color: #6A402C;
 
+}
+.form1 {
+    background-image: url("coffee1.png");
+    background-size: cover;
+    background-repeat: space;
+    color: black;
+    font-weight: bolder;
+    font-size: 1em;
+}
+.form2 {
+    background-image: url("coffee3.jpeg");
+    background-size: cover;
+    background-repeat: space;
+    color: black;
+    font-weight: bolder;
+    font-size: 1em;
+}
+.nav-link {
+    border-right-style: groove;
+    border-right-width: thin;
+    border-color: rgba(119, 136, 153, 0.32);
+    color: #5E453E !important;
+    font-family: 'Raleway', sans-serif;
+}
+nav {
+    display: flex;
+    flex-wrap: nowrap!important;
+    align-items: center;
+    justify-content: space-between!important;
+}
+.navbar-brand {
+    color: #764E2B!important;
+    font-family: 'Raleway', sans-serif;
+}
+.form-text {
+    font-family: 'Raleway', sans-serif;
+}
 @keyframes rotation {
     from {
         transform: rotate(0deg);

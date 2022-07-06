@@ -18,23 +18,24 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="https://codeup.com/" target="_blank">&copy; Café Salastello</a>
+			<div class="header text-center text-nowrap">
+				<span>C o f f e e !</span>
+			</div>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
 					aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"><i class="fa-solid fa-coffee-beans"></i></span>
+				<span class="menu mt-2"><i class="navbar-toggler-icon fa-solid fa-mug-saucer pt-1"></i></span>
 			</button>
-			<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+			<div class="collapse navbar-collapse justify-content-end text-nowrap" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
+					<hr>
 					<a class="nav-link active" aria-current="page" href="#">Home</a>
+					<hr>
 					<a class="nav-link" href="http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide" target="_blank">More info</a>
+					<hr>
 				</div>
 			</div>
 		</div>
 	</nav>
-	<header class="p-3">
-		<div class="col-12 text-center text-nowrap">
-			<h1>C o f f e e !</h1>
-		</div>
-	</header>
 	<main>
 		<div class="container">
 			<div class="row">
@@ -43,12 +44,12 @@
 						<tbody class="col align-center d-md-flex d-lg-flex d-xl-flex d-block d-sm-block" id="coffees"></tbody>
 					</table>
 				</div>
-				<div class="col-6 col-md-4 col-lg-3">
+				<div class="col-6 col-md-4 col-lg-3 form-text">
 					<div class="row">
-						<div class="card mt-4">
+						<div class="card mt-4 fw-bolder form1">
 							<h3 class=" mt-1 sub-header">Find a Coffee</h3>
 							<form>
-								<div class="mb-4">
+								<div class="mb-2">
 									<label for="roast-selection">Roast</label>
 									<select id="roast-selection" class="form-select">
 										<option selected id="all">all</option>
@@ -66,15 +67,15 @@
 									<input id="coffeeName" type="search" name="coffeeName" placeholder="coffee or roast">
 								</div>
 								<div class="col-12 my-3">
-									<button id="pushable"><input id="submit1" type="submit" value="I'm feeling lucky" style="width: 100%;" class=" text-nowrap btn-primary"></button>
+									<button id="pushable"><input id="submit1" type="submit" value="I'm feeling lucky" style="width: 100%;" class="fs-6 text-nowrap"></button>
 								</div>
 							</form>
 						</div>
 						<hr class="my-4">
-						<div class="card">
+						<div class="card fw-bolder form2">
 							<h3 class="mt-1 sub-header">Add a Coffee</h3>
 							<form>
-								<div class="mb-3">
+								<div class="mb-1">
 									<label for="createRoast">Roast</label>
 									<select id="createRoast" class="form-select">
 										<option selected value="light">light</option>
@@ -82,10 +83,15 @@
 										<option value="dark">dark</option>
 									</select>
 								</div>
-								<div class="col-12 mt-2">
+								<div class="col-12">
 									<label for="createCoffee">Name</label>
 									<br>
 									<input id="createCoffee" type="text" name="createCoffee" placeholder="add a coffee" style="width: 100%">
+								</div>
+								<div class="col-12 mt-1">
+									<label for="createDescription">Description</label>
+									<br>
+									<input id="createDescription" type="text" name="createDescription" placeholder="add a description" style="width: 100%">
 								</div>
 								<div class="col-12 my-3">
 									<input id="submit2" type="submit" value="Add" style="width: 100%" class="btn-primary">
@@ -103,11 +109,11 @@
 	<footer class="mt-4">
 		<p class="text-center">
 			&copy; 2022 Café Salastello. All rights reserved.
-			<a href="https://www.instagram.com/gocodeup/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-			<a href="https://www.facebook.com/GoCodeup/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-			<a href="https://twitter.com/gocodeup?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+			<a class="footanchor" href="https://www.instagram.com/gocodeup/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+			<a class="footanchor" href="https://www.facebook.com/GoCodeup/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+			<a class="footanchor" href="https://twitter.com/gocodeup?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa-brands fa-twitter"></i></a>
 		</p>
-		<p class="by text-center text-muted">
+		<p class="by text-center">
 			By: Darien Salazar and Chase Forestello
 		</p>
 	</footer>

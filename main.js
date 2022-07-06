@@ -44,18 +44,26 @@ function popCoffee (e) {
 
 
 function renderCoffee(coffee, specialIndex) {
-    return `<div class="coffee col-12 col-sm-12 col-md-12 col-lg-6 col-xxl-6">
-                    <div class="card fs-4 fw-bold text-nowrap text-center ${specialIndex} p-3 m-2 b-1" style="border-radius: 1em">
+    return `<div class="coffee card-container col-md-5 col-lg-3 col-xxl-3 pt-1">
+                    <div class="card m-1 card-flip" style="height: 65%">
+                    <div class="front card-block">
+                    <div class="fs-5 fw-bold text-nowrap card-text text-center ${specialIndex} m-2 b-1">
                         <span>${coffee.name} ${coffee.roast}</span>
                     </div>
-                </div>`;
+                    </div>
+                    <div class="back card-block">
+                        <p class="text-center fw-bold">${coffee.description}</p>
+                    </div>
+                    </div>
+                    </div>
+            </div>`;
 }
 
 function renderCoffees(coffees, luckyIndex = -1) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
         if (i === luckyIndex) {
-            html += renderCoffee(coffees[i], 'luckyCoffee')
+            html += renderCoffee(coffees[i], 'luckyCoffee rotate')
         } else {
             html += renderCoffee(coffees[i], "")
         }
@@ -104,20 +112,20 @@ searchInput.addEventListener("keyup", (event) => {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 'light', name: 'Light City', roast: '<i class="light fa-solid fa-mug-hot"></i>'},
-    {id: 'light', name: 'Half City', roast: '<i class="light fa-solid fa-mug-hot"></i>'},
-    {id: 'light', name: 'Cinnamon', roast: '<i class="light fa-solid fa-mug-hot"></i>'},
-    {id: 'medium', name: 'City', roast: '<i class="medium fa-solid fa-mug-hot"></i>'},
-    {id: 'medium', name: 'American', roast: '<i class="medium fa-solid fa-mug-hot"></i>'},
-    {id: 'medium', name: 'Breakfast', roast: '<i class="medium fa-solid fa-mug-hot"></i>'},
-    {id: 'dark', name: 'High', roast: ' <i class="dark fa-solid fa-mug-hot"></i>'},
-    {id: 'dark', name: 'Continental', roast: '<i class="dark fa-solid fa-mug-hot"></i>'},
-    {id: 'dark', name: 'New Orleans', roast: '<i class="dark fa-solid fa-mug-hot"></i>'},
-    {id: 'dark', name: 'European', roast: '<i class="dark fa-solid fa-mug-hot"></i>'},
-    {id: 'dark', name: 'Espresso', roast: '<i class="dark fa-solid fa-mug-hot"></i>'},
-    {id: 'dark', name: 'Viennese', roast: '<i class="dark fa-solid fa-mug-hot"></i>'},
-    {id: 'dark', name: 'Italian', roast: '<i class="dark fa-solid fa-mug-hot"></i>'},
-    {id: 'dark', name: 'French', roast: '<i class="dark fa-solid fa-mug-hot"></i>'},
+    {id: 'light', name: 'Light City', roast: '<i class="light fa-solid fa-mug-hot"></i>', description: 'Light brown in color, this roast is generally preferred for milder coffee varieties with high acidity'},
+    {id: 'light', name: 'Half City', roast: '<i class="light fa-solid fa-mug-hot"></i>', description: 'Light brown in color, this roast is generally preferred for milder coffee varieties with high acidity'},
+    {id: 'light', name: 'Cinnamon', roast: '<i class="light fa-solid fa-mug-hot"></i>', description: 'Light brown in color, this roast is generally preferred for milder coffee varieties with high acidity'},
+    {id: 'medium', name: 'City', roast: '<i class="medium fa-solid fa-mug-hot"></i>', description: 'This roast is medium brown in color with a stronger flavor and a non-oily surface with medium acidity'},
+    {id: 'medium', name: 'American', roast: '<i class="medium fa-solid fa-mug-hot"></i>', description: 'This roast is medium brown in color with a stronger flavor and a non-oily surface with medium acidity'},
+    {id: 'medium', name: 'Breakfast', roast: '<i class="medium fa-solid fa-mug-hot"></i>', description: 'This roast is medium brown in color with a stronger flavor and a non-oily surface with medium acidity'},
+    {id: 'dark', name: 'High', roast: ' <i class="dark fa-solid fa-mug-hot"></i>', description: 'This roast produces shiny black beans with an oily surface and a pronounced bitterness with low acidity'},
+    {id: 'dark', name: 'Continental', roast: '<i class="dark fa-solid fa-mug-hot"></i>', description: 'This roast produces shiny black beans with an oily surface and a pronounced bitterness with low acidity'},
+    {id: 'dark', name: 'New Orleans', roast: '<i class="dark fa-solid fa-mug-hot"></i>', description: 'This roast produces shiny black beans with an oily surface and a pronounced bitterness with low acidity'},
+    {id: 'dark', name: 'European', roast: '<i class="dark fa-solid fa-mug-hot"></i>', description: 'This roast produces shiny black beans with an oily surface and a pronounced bitterness with low acidity'},
+    {id: 'dark', name: 'Espresso', roast: '<i class="dark fa-solid fa-mug-hot"></i>', description: 'This roast produces shiny black beans with an oily surface and a pronounced bitterness with low acidity'},
+    {id: 'dark', name: 'Viennese', roast: '<i class="dark fa-solid fa-mug-hot"></i>', description: 'This roast produces shiny black beans with an oily surface and a pronounced bitterness with low acidity'},
+    {id: 'dark', name: 'Italian', roast: '<i class="dark fa-solid fa-mug-hot"></i>', description: 'This roast produces shiny black beans with an oily surface and a pronounced bitterness with low acidity'},
+    {id: 'dark', name: 'French', roast: '<i class="dark fa-solid fa-mug-hot"></i>', description: 'This roast produces shiny black beans with an oily surface and a pronounced bitterness with low acidity'},
 ];
 // Remove the icons but keep the classes and try using CSS to add icons or at least style the roasts
 

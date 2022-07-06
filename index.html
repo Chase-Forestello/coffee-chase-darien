@@ -19,19 +19,15 @@
 				<div class="container-fluid">
 					<a class="navbar-brand" href="https://codeup.com/" target="_blank">&copy; Café Salastello</a>
 					<div class="header text-center text-nowrap">
-						<span>C o f f e e !</span>
+						<span>$nbsp</span>
 					</div>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
 							aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="menu mt-2"><i class="navbar-toggler-icon fa-solid fa-mug-saucer pt-1"></i></span>
+						<span class="menu mt-2"><i class="hamburger navbar-toggler-icon fa-solid fa-mug-saucer pt-1"></i></span>
 					</button>
 					<div class="collapse navbar-collapse justify-content-end text-nowrap" id="navbarNavAltMarkup">
 						<div class="navbar-nav">
-							<hr>
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
-							<hr>
 							<a class="nav-link" href="http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide" target="_blank">More info</a>
-							<hr>
 						</div>
 					</div>
 				</div>
@@ -64,8 +60,24 @@
 										<div class="col-12">
 											<label for="coffeeName">Coffee Name</label>
 											<br>
-											<input id="coffeeName" type="search" name="coffeeName" placeholder="coffee or roast">
+											<input id="coffeeName" type="search" list="coffeeList"name="coffeeName" placeholder="coffee or roast">
 										</div>
+										<datalist id="coffeeList">
+											<option value="Light City">
+											<option value="Half City">
+											<option value="Cinnamon">
+											<option value="City">
+											<option value="American">
+											<option value="Breakfast">
+											<option value="High">
+											<option value="Continental">
+											<option value="New Orleans">
+											<option value="European">
+											<option value="Espresso">
+											<option value="Viennese">
+											<option value="Italian">
+											<option value="French">
+										</datalist>
 										<div class="col-12 my-3">
 											<button id="pushable"><input id="submit1" type="submit" value="I'm feeling lucky" style="width: 100%;" class="fs-6 text-nowrap"></button>
 										</div>
@@ -86,12 +98,12 @@
 										<div class="col-12">
 											<label for="createCoffee">Name</label>
 											<br>
-											<input id="createCoffee" type="text" name="createCoffee" placeholder="add a coffee" style="width: 100%">
+											<input id="createCoffee" type="search" name="createCoffee" placeholder="add a coffee" style="width: 100%">
 										</div>
 										<div class="col-12 mt-1">
 											<label for="createDescription">Description</label>
 											<br>
-											<input id="createDescription" type="text" name="createDescription" placeholder="add a description" style="width: 100%">
+											<input id="createDescription" type="search" name="createDescription" placeholder="add a description" style="width: 100%">
 										</div>
 										<div class="col-12 my-3">
 											<input id="submit2" type="submit" value="Add" style="width: 100%" class="btn-primary">
@@ -109,12 +121,12 @@
 			<footer class="mt-4">
 				<p class="text-center">
 					&copy; 2022 Café Salastello. All rights reserved.
-					<a class="footanchor" href="https://www.instagram.com/gocodeup/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+					<a class="footanchor" href="https://www.instagram.com/gocodeup/?hl=en" target="_blank"><i class="gradient-text fa-brands fa-instagram"></i></a>
 					<a class="footanchor" href="https://www.facebook.com/GoCodeup/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
 					<a class="footanchor" href="https://twitter.com/gocodeup?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa-brands fa-twitter"></i></a>
 				</p>
 				<p class="by text-center">
-					By: Darien Salazar and Chase Forestello
+					By: <a class="byAnchor" href="https://github.com/darienaxelll" target="_blank">Darien Salazar <i class="fa-brands fa-github"></i></a> and <a class="byAnchor" href="https://github.com/Chase-Forestello" target="_blank">Chase Forestello <i class="fa-brands fa-github"></i></a>
 				</p>
 			</footer>
 			<script src="main.js"></script>

@@ -26,13 +26,52 @@ input {
 section {
     margin: 0;
 }
+.fa-facebook {
+    color: #4267B2;
+}
+.fa-twitter {
+    color: #1DA1F2;
+}
+/*.fa-instagram:hover{*/
+/*    background-image: linear-gradient(red, yellow, green);*/
+/*    background-clip: text;*/
+/*    color: transparent;*/
+/*}*/
+.hamburger{
+    border: solid black 1px;
+    border-radius: 50%;
+}
+.hamburger:hover {
+    border: none;
+}
+.gradient-text {
+    /* Fallback: Set a background color. */
+    background-color: red;
 
+    /* Create the gradient. */
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
 footer {
     border-top: 1px solid grey;
     color: floralwhite;
 }
 .footanchor {
     color: floralwhite;
+}
+.byAnchor{
+    color: floralwhite;
+    text-decoration: underline;
 }
 .coffee {
     color: rgba(180, 82, 21, 0.62);
@@ -45,7 +84,7 @@ nav {
     font-family: 'Raleway', sans-serif;
     background-image: url("Light-Medium-Dark-Roast-Beans-2500_2500x.jpg");
     background-size: cover;
-    color: rgb(250, 250, 250);
+    color: rgba(250, 250, 250, 0);
     width: 100%;
     border-radius: 5em;
     font-size: 2em;
@@ -56,7 +95,7 @@ nav {
 }
 .by {
     font-size: x-small;
-    color: whitesmoke;
+    color: whitesmoke!important;
 }
 .light {
     color: #f5b467;
@@ -83,11 +122,11 @@ nav {
     transform: translateY(-6px);
 }
 #submit2{
-    background: rgba(139, 69, 19, 0.87);
+    background: rgba(139, 69, 19, 0.94);
     border-color: #5E453E;
 }
 #submit3{
-    background: rgba(139, 69, 19, 0.87);
+    background: rgba(139, 69, 19, 0.94);
     border-color: #5E453E;
 }
 #pushable {
@@ -102,9 +141,9 @@ nav {
 #pushable:active #submit1 {
     transform: translateY(-2px);
 }
-.luckyCoffee{
-    z-index: 1000;
-}
+/*.luckyCoffee{*/
+/*    z-index: 1000;*/
+/*}*/
 .card-container {
     perspective: 700px;
     margin-inline-end: 18px;
@@ -165,7 +204,7 @@ body {
     top: 1em;
 }
 .rotate {
-    animation: rotation 3s ease-in-out;
+    animation: rotation 5s;
 }
 .menu {
     color: #6A402C;
@@ -188,9 +227,6 @@ body {
     font-size: 1em;
 }
 .nav-link {
-    border-right-style: groove;
-    border-right-width: thin;
-    border-color: rgba(119, 136, 153, 0.32);
     color: #5E453E !important;
     font-family: 'Raleway', sans-serif;
 }
@@ -207,6 +243,14 @@ nav {
 .form-text {
     font-family: 'Raleway', sans-serif;
 }
+
+/*@keyframes blinkingText{*/
+/*    0%{		color: #000;	}*/
+/*    49%{	color: transparent;	}*/
+/*    50%{	color: transparent;	}*/
+/*    99%{	color:transparent;	}*/
+/*    100%{	color: #000;	}*/
+/*}*/
 @keyframes rotation {
     from {
         transform: rotate(0deg);
@@ -214,4 +258,9 @@ nav {
     to {
         transform: rotate(359deg);
     }
+    0%{		color: #f5b467;	}
+    25%{	color: red;	}
+    50%{	color: orange;	}
+    75%{	color: yellow;	}
+    100%{	color: #f5b467;	}
 }

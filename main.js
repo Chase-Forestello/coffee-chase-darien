@@ -25,7 +25,7 @@ function feelingLucky (e) {
 }
 
 function pushCoffee (e) {
-    var newCoffee = {id: selectedCreatedRoast.value, name: newDrink.value, roast: `<i class="${selectedCreatedRoast.value} fa-solid fa-mug-hot"></i>`, description: newDescription.value};
+    var newCoffee = {id: selectedCreatedRoast.value, name: newDrink.value, roast: `<i class="${selectedCreatedRoast.value} blinking fa-solid fa-mug-hot"></i>`, description: newDescription.value};
     e.preventDefault();
     if (newCoffee.name.length === 0) {
         alert('You must enter a name');
